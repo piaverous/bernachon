@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import cookie from '../libs/cookie';
+import cookie from '../libs/cookie/client';
 
-export default class Protected extends React.Component {
+export default class Protected extends React.Component<any,any> {
   redirectUrl = '/login';
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
       initialized: false,
@@ -41,7 +41,7 @@ export default class Protected extends React.Component {
       return children;
     }
     return (
-      <Route render={({ staticContext }) => {
+      <Route render={({ staticContext }: any) => {
         // eslint-disable-next-line
         if (staticContext) staticContext.status = 403;
         return <Redirect to={this.redirectUrl} />;

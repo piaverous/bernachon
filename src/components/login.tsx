@@ -1,13 +1,13 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import GuestLayout from './guest-layout';
-import cookie from '../libs/cookie';
+import cookie from '../libs/cookie/client';
 import Authenticator from './fake-authenticator';
 
-export default class Login extends React.Component {
+export default class Login extends React.Component<any,any> {
   onLoginRedirectUrl = '/dashboard';
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
       loaded: false,
@@ -31,7 +31,7 @@ export default class Login extends React.Component {
     }
   }
 
-  handleSubmit(e) {
+  handleSubmit(e: any) {
     if (e && e.preventDefault) e.preventDefault();
     const loginData = new FormData(e.target);
     const username = loginData.get('username');

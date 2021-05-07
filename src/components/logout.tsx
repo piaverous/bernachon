@@ -1,11 +1,12 @@
+import { any } from 'prop-types';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Authenticator from './fake-authenticator';
 
-export default class Logout extends React.Component {
+export default class Logout extends React.Component<any,any> {
   onLogoutRedirectUrl = '/login';
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
       logout: false,

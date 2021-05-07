@@ -1,15 +1,15 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Header extends PureComponent {
-  constructor(props) {
+export default class Header extends PureComponent<any,any> {
+  constructor(props: any) {
     super(props);
     this.state = {
       open: false,
     };
   }
 
-  toggleMenuBar(e) {
+  toggleMenuBar(e: any) {
     const { open } = this.state;
     if (e && e.preventDefault) {
       e.preventDefault();
@@ -30,7 +30,7 @@ export default class Header extends PureComponent {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="container">
             <div className="navbar-brand">
-              <Link to="/" className=" navbar-item"><strong>ReactPWA</strong></Link>
+              <Link to="/" className=" navbar-item"><strong>Bernachon 🐐</strong></Link>
               <button
                 type="button"
                 onClick={e => this.toggleMenuBar(e)}

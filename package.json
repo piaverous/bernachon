@@ -47,6 +47,7 @@
     "universal-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
     "webpack-bundle-analyzer": "^4.4.0"
   }
 }

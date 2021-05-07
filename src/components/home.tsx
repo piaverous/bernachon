@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GuestLayout from './guest-layout';
 
-const Column = (props) => {
+const Column = (props: any) => {
   const { title, description, link } = props;
   return (
     <div className="column">

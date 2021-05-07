@@ -1,8 +1,8 @@
 import React from 'react';
 import GuestLayout from './guest-layout';
 
-const stripTags = (s, elip = true, l = 60) => `${s.replace(/(<([^>]+)>)/ig, '').replace(/[^a-zA-Z0-9\s]/g, ' ').substr(0, l)} ${elip ? '...' : ''}`;
-export default (props) => {
+const stripTags = (s: string, elip = true, l = 60) => `${s.replace(/(<([^>]+)>)/ig, '').replace(/[^a-zA-Z0-9\s]/g, ' ').substr(0, l)} ${elip ? '...' : ''}`;
+export default (props: any) => {
   // eslint-disable-next-line
   const { loadedData: [blog1, blog2, blog3, blog4] } = props;
   return (
