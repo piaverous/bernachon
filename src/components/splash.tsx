@@ -6,7 +6,7 @@ export default () => (
     <div className="hero-body">
       <div className="container">
         <h1 className="title">
-            Bienvenue à Bernachon !
+            Bernachon !
         </h1>
         <h2 className="subtitle">
             Du 🎉, des 🍻 et des 🐐

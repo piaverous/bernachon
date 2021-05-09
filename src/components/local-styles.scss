@@ -1,0 +1,17 @@
+.gray {
+  background-color: #666;
+  color: #fff
+}
+
+.picture {
+  max-height: 20rem;
+  overflow: hidden;
+  vertical-align: middle;
+
+  // Bigger than tablet screen
+  @media (min-width: 769px) {
+    img {
+      margin-top: -25rem;
+    }
+  }
+}

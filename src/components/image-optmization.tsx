@@ -2,9 +2,9 @@ import React from 'react';
 import Picture from '@pawjs/srcset/picture';
 import GuestLayout from './guest-layout';
 // eslint-disable-next-line
-import CatDog from '../resources/img/dog-cat.jpg';
+import CuteGoat from '../resources/img/cute-goat.jpeg';
 // eslint-disable-next-line
-import CatDogSrcset from '../resources/img/dog-cat.jpg?sizes=1200w+1000w+800w+600w+400w&placeholder';
+import CuteGoatSrcset from '../resources/img/cute-goat.jpeg?sizes=1200w+1000w+800w+600w+400w&placeholder';
 
 export default () => (
   <GuestLayout>
@@ -24,7 +24,7 @@ export default () => (
         <strong>57%</strong>
           . Thus making the final size to just 91.2KB
       </p>
-      <img alt="Cat & Dog Sleeping" src={CatDog} />
+      <img alt="Cat & Dog Sleeping" src={CuteGoat} />
       <hr />
       <h2 className="title">Atyantik (ultimate) Optimization</h2>
       <div className="content">
@@ -65,7 +65,7 @@ export default () => (
           <h3>Check below!</h3>
         </div>
       </div>
-      <Picture alt="Cat & Dog" image={CatDogSrcset} />
+      <Picture alt="Cat & Dog" image={CuteGoatSrcset} />
     </div>
   </GuestLayout>
 );

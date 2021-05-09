@@ -11,13 +11,13 @@ export default [
     exact: true,
     component: () => import('../components/home'),
     seo: {
-      title: 'Home | ReactPWA Demo',
-      description: 'Feature set offered by ReactPWA with pluggable @pawjs plugins. ReactPWA is highly customizable and once can achieve anything as it is extendable',
-      image: FeaturesImage,
+      title: '🐐 Bernachon',
+      description: 'Partageons le fun de la vie de Bernachon, ensemble dans une vieille ferme !',
+      // image: FeaturesImage,
     },
   },
   {
-    path: '/global-local-css',
+    path: '/dates',
     exact: true,
     component: () => import('../components/global-local-css'),
     seo: {
@@ -27,7 +27,7 @@ export default [
     },
   },
   {
-    path: '/typescript-counter',
+    path: '/minijeux',
     exact: true,
     component: () => import('../components/typescript-counter'),
     seo: {
@@ -37,7 +37,7 @@ export default [
     },
   },
   {
-    path: '/skeleton-loading',
+    path: '/location',
     exact: true,
     loadData: async () => new Promise((r) => {
       setTimeout(() => {
