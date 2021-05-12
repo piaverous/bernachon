@@ -38,7 +38,7 @@ const Column = (props: ColumnProps) => {
 
 export default () => (
   <GuestLayout>
-    <section className={`${localStyles.picture} hero is-medium is-info is-bold`}>
+    <section className={`${localStyles.banner} hero is-medium is-info is-bold`}>
       <Picture alt="Cute Goat" image={CuteGoatSrcset}/>
     </section>
 

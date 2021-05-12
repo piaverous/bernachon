@@ -19,10 +19,10 @@ export default [
   {
     path: '/dates',
     exact: true,
-    component: () => import('../components/global-local-css'),
+    component: () => import('../components/dates'),
     seo: {
-      title: 'CSS - Globally & Locally | ReactPWA Demo',
-      description: 'Sometimes we use global css classes like pad-10 but sometimes we need to write class names within modules that do not conflict with other modules, that is where local css comes into the picture',
+      title: '📆 Dates',
+      description: 'Dates du séjour, et liste des persssonnes présentes par date',
       image: CSSGlobalLocalImage,
     },
   },
@@ -38,26 +38,26 @@ export default [
   },
   {
     path: '/location',
-    exact: true,
-    loadData: async () => new Promise((r) => {
-      setTimeout(() => {
-        fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
-          .then(res => res.json())
-          .then(res => r(res));
-      }, 1000);
-    }),
-    component: () => import('../components/skeleton-loading'),
+    // exact: true,
+    // loadData: async () => new Promise((r) => {
+    //   setTimeout(() => {
+    //     fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
+    //       .then(res => res.json())
+    //       .then(res => r(res));
+    //   }, 1000);
+    // }),
+    component: () => import('../components/location'),
     skeleton,
     seo: {
-      title: 'Skeleton Loading | ReactPWA Demo',
-      description: 'Tired of adding ugly loaders? Do not let your users get confused, give them the best user experience of what is getting loaded. Use Skeleton Loading',
+      title: '📍 Le Lieu',
+      description: 'Comment s\'y rendre ? Qu\'y a-t-il aux alentours ?',
       image: SkeletonImage,
     },
   },
   {
     path: '/image-optimization',
     exact: true,
-    component: () => import('../components/image-optmization'),
+    component: () => import('../components/location'),
     seo: {
       title: 'Image Optimization | ReactPWA Demo',
       description: 'Serve optimize images automatically with Lazy loading and WebP support with fallback to JPG/PNG of original image.',
