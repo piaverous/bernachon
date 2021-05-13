@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+fastapi = "*"
+agraffe = "*"
+firebase-admin = "*"
+uvicorn = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+dev = "uvicorn app:app --host=0.0.0.0 --port 3000 --reload"
+prod = "uvicorn app:app --host=0.0.0.0"
