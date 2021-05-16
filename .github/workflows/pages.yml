@@ -1,4 +1,4 @@
-name: Build and Deploy Frontend to bernachon.pivrous.wtf
+name: Frontend CI
 on: 
   push:
     branches:
