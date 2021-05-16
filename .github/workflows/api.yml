@@ -18,4 +18,4 @@ jobs:
           source_dir: api
           service_account_email: ${{ secrets.GCP_API_SERVICE_ACCOUNT_EMAIL }}
           credentials: ${{ secrets.GCP_SA_CREDENTIALS }}
-          env_vars: AgraffeService="Google Cloud Functions",OPENWEATHERMAP_API_KEY=${{ secrets.OPENWEATHERMAP_API_KEY }},COORDS_LAT=${{ secrets.COORDS_LAT }},COORDS_LON=${{ secrets.COORDS_LON }}
+          env_vars: AgraffeService=Google Cloud Functions,OPENWEATHERMAP_API_KEY=${{ secrets.OPENWEATHERMAP_API_KEY }},COORDS_LAT=${{ secrets.COORDS_LAT }},COORDS_LON=${{ secrets.COORDS_LON }}
