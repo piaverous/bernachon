@@ -29,3 +29,15 @@
     height: 100%;
   }
 }
+
+.scrollweather {
+  // Smaller than tablet screen
+  @media (max-width: 769px) {
+    overflow: scroll;
+    margin-top: 1rem;
+  }
+}
+
+.mainmeteopic {
+  margin-top: 25%;
+}

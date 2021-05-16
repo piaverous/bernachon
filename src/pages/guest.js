@@ -37,6 +37,16 @@ export default [
     },
   },
   {
+    path: '/weather',
+    exact: true,
+    component: () => import('../components/weather'),
+    seo: {
+      title: '🌤 Météo',
+      description: 'La Météo quoi',
+      image: CSSGlobalLocalImage,
+    },
+  },
+  {
     path: '/location',
     // exact: true,
     // loadData: async () => new Promise((r) => {

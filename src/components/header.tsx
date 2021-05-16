@@ -61,6 +61,9 @@ export default class Header extends PureComponent<any,any> {
               <Link className="navbar-item" to="/minijeux" onClick={() => this.closeMenuBar()}>
                 🕹 Minijeux
               </Link>
+              <Link className="navbar-item" to="/weather" onClick={() => this.closeMenuBar()}>
+                🌤 Météo
+              </Link>
             </div>
           </div>
         </nav>
