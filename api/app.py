@@ -1,14 +1,17 @@
-from typing import Optional
-
 from fastapi import Cookie, FastAPI, Header, HTTPException
 from fastapi.responses import PlainTextResponse, Response
-
+from fastapi.middleware.cors import CORSMiddleware
+from firebase_admin import credentials
+from firebase_admin import firestore
 from models import Item
+from typing import Optional
 
 import firebase_admin
 import os
-from firebase_admin import credentials
-from firebase_admin import firestore
+import requests
+
+OPEN_WEATHER_BASE = "http://api.openweathermap.org/data/2.5/onecall"
+origins = ["*"]
 
 # Use the application credentials
 if os.environ.get("GCP_PROJECT"):
@@ -22,6 +25,13 @@ else:
 db = firestore.client()
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get('/')
 def root():
@@ -81,9 +91,12 @@ def cookies(c1: Optional[str] = Cookie(None), c2: Optional[str] = Cookie(None)):
     }
 
 
-@app.get('/text')
-def text():
-    return PlainTextResponse('test message!')
+@app.get('/weather')
+def get_weather():
+    url = f"{OPEN_WEATHER_BASE}?lat={os.getenv('COORDS_LAT')}&lon={os.getenv('COORDS_LON')}&appid={os.getenv('OPENWEATHERMAP_API_KEY')}&units=metric"
+
+    res = requests.get(url).json()
+    return res
 
 
 @app.get('/image')

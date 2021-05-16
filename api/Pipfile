@@ -10,6 +10,7 @@ fastapi = "*"
 agraffe = "*"
 firebase-admin = "*"
 uvicorn = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"

@@ -1,0 +1,24 @@
+name: Build and Deploy API to Google Cloud Functions
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: deploy
+        uses: google-github-actions/deploy-cloud-functions@main
+        with:
+          name: bernachon-api
+          runtime: python37
+          entry_point: entry_point
+          region: europe-west6
+          source_dir: api
+          service_account_email: ${{ secrets.GCP_API_SERVICE_ACCOUNT_EMAIL }}
+          credentials: ${{ secrets.GCP_SA_CREDENTIALS }}
+
+      # Example of using the output
+      - id: test
+        run: curl "${{ steps.deploy.outputs.url }}"
