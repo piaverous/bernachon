@@ -18,7 +18,3 @@ jobs:
           source_dir: api
           service_account_email: ${{ secrets.GCP_API_SERVICE_ACCOUNT_EMAIL }}
           credentials: ${{ secrets.GCP_SA_CREDENTIALS }}
-
-      # Example of using the output
-      - id: test
-        run: curl "${{ steps.deploy.outputs.url }}"

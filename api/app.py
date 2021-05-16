@@ -35,7 +35,7 @@ app.add_middleware(
 
 @app.get('/')
 def root():
-    return {'Hello': 'World'}
+    return {'Dio': 'ZA WARUDOOOOO !'}
 
 
 @app.get('/empty')
