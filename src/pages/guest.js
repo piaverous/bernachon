@@ -1,9 +1,7 @@
 import fetch from 'universal-fetch';
 import skeleton from '../components/skeleton';
-import FeaturesImage from '../resources/img/seo/features.png';
 import CSSGlobalLocalImage from '../resources/img/seo/css-global-local.png';
 import SkeletonImage from '../resources/img/seo/skeleton-loading.png';
-import ImageOptimizationImage from '../resources/img/seo/image-optimization.png';
 
 export default [
   {
@@ -13,7 +11,6 @@ export default [
     seo: {
       title: '🐐 Bernachon',
       description: 'Partageons le fun de la vie de Bernachon, ensemble dans une vieille ferme !',
-      // image: FeaturesImage,
     },
   },
   {
@@ -62,25 +59,6 @@ export default [
       title: '📍 Le Lieu',
       description: 'Comment s\'y rendre ? Qu\'y a-t-il aux alentours ?',
       image: SkeletonImage,
-    },
-  },
-  {
-    path: '/image-optimization',
-    exact: true,
-    component: () => import('../components/location'),
-    seo: {
-      title: 'Image Optimization | ReactPWA Demo',
-      description: 'Serve optimize images automatically with Lazy loading and WebP support with fallback to JPG/PNG of original image.',
-      image: ImageOptimizationImage,
-    },
-  },
-  {
-    path: '/contribute',
-    exact: true,
-    component: () => import('../components/contribute'),
-    seo: {
-      title: 'Contribute | ReactPWA Demo',
-      description: 'Be a part of larger family. Get involved with us and support our project ReactPWA',
     },
   },
 ];
