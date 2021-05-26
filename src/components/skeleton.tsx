@@ -1,6 +1,18 @@
 import React from 'react';
+import GuestLayout from './guest-layout';
 
 export default () => (
+  <GuestLayout>
+    <section className="hero is-info">
+      <div className="hero-body">
+        <p className="title">
+          📆 Dates
+        </p>
+        <p className="subtitle">
+          Voyez les dates du séjour, et les présences de chacun
+        </p>
+      </div>
+    </section>
   <div className="skeleton-blink">
     <div className="tile is-ancestor">
       <div className="tile is-parent is-vertical is-12">
@@ -34,4 +46,5 @@ export default () => (
       </div>
     </div>
   </div>
+  </GuestLayout>
 );

@@ -29,11 +29,15 @@
     "cloudinary": "^1.24.0",
     "eslint-import-resolver-webpack": "^0.13.0",
     "fork-ts-checker-webpack-plugin": "^6.1.0",
+    "interactjs": "^1.10.11",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
+    "react-calendar-timeline": "^0.27.0",
     "react-vis": "^1.11.7",
     "universal-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "@types/react-calendar-timeline": "^0.26.3",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-vis": "^1.11.6",
     "webpack-bundle-analyzer": "^4.4.0"

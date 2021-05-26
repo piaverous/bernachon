@@ -19,7 +19,15 @@ export default [
   {
     path: '/dates',
     exact: true,
+    loadData: async () => new Promise((r) => {
+      setTimeout(() => {
+        fetch(`${process.env.API_URL}/read`)
+          .then(res => res.json())
+          .then(res => r(res));
+      }, 1000);
+    }),
     component: () => import('../components/dates'),
+    skeleton,
     seo: {
       title: '📆 Dates',
       description: 'Dates du séjour, et liste des persssonnes présentes par date',
@@ -48,14 +56,6 @@ export default [
   },
   {
     path: '/location',
-    // exact: true,
-    // loadData: async () => new Promise((r) => {
-    //   setTimeout(() => {
-    //     fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
-    //       .then(res => res.json())
-    //       .then(res => r(res));
-    //   }, 1000);
-    // }),
     component: () => import('../components/location'),
     skeleton,
     seo: {

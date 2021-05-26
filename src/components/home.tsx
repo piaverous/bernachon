@@ -65,9 +65,9 @@ export default () => (
             description="Pour en apprendre plus sur le lieu, comment s'y rendre, ce qu'il y a autour..."
           />
           <Column
-            title="🕹 Minijeux"
-            link="/minijeux"
-            description="Quelques minijeux dans le thème du séjour, ça fait toujours plaisir"
+            title="🌤 Météo"
+            link="/weather"
+            description="La météo quoi, rien de fou... Mais c'est toujours pratique !"
           />
         </div>
       </div>

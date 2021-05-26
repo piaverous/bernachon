@@ -47,18 +47,9 @@ def empty():
 def empty_text():
     return ''
 
-@app.get('/create')
-def create_ada_lovelace():
-    doc_ref = db.collection('users').document('tbombadil')
-    doc_ref.set({
-        'first': 'Tom',
-        'last': 'Bombadil',
-        'born': 3050
-    })
-
 @app.get('/read')
-def read_ada_lovelace():
-    users_ref = db.collection('users')
+def read_participants():
+    users_ref = db.collection('participants')
     docs = users_ref.stream()
     users_list = []
 

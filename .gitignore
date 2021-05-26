@@ -77,3 +77,6 @@ src/config/assets.js
 
 # Credentials
 *credentials.json
+
+# Personal data
+participants.json
