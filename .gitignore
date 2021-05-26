@@ -79,4 +79,4 @@ src/config/assets.js
 *credentials.json
 
 # Personal data
-participants.json
+participants.csv

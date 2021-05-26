@@ -57,7 +57,7 @@ export default () => (
           <Column
             title="📆 Dates"
             link="/dates"
-            description="Checke les dates du séjour et choisis les tiennes !"
+            description="Checke les dates du séjour et regarde qui est là en même temps que toi !"
           />
           <Column
             title="🏡 Le Lieu"
