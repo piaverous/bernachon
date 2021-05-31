@@ -4,7 +4,7 @@ from firebase_admin import firestore
 import firebase_admin
 import os
 import csv
-
+import json
 
 # Use the application credentials
 if os.environ.get("GCP_PROJECT"):
@@ -17,14 +17,20 @@ else:
 
 db = firestore.client()
 
-with open('participants.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-    for row in spamreader:
-        name, arr, dep = row
-        doc_ref = db.collection('participants').document(name)
-        doc_ref.set({
-            'name': name,
-            'arrivee': arr,
-            'depart': dep
-        })
-        print(f"{name} - Arr {arr} - Dep {dep}")
+
+
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x:
+y = json.loads(x)
+
+# the result is a Python dictionary:
+print(y["age"])
+
+with open('participants.json', newline='') as jsonfile:
+    participants = json.load(jsonfile)
+    for participant in participants:
+        doc_ref = db.collection('participants').document(participant['name'])
+        doc_ref.set(participant)
+        print(f"{participant['name']} - Arr {participant['arrivee']} - Dep {participant['depart']}")
