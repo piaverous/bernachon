@@ -1,10 +1,7 @@
-from fastapi import Cookie, FastAPI, Header, HTTPException
-from fastapi.responses import PlainTextResponse, Response
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from firebase_admin import credentials
 from firebase_admin import firestore
-from models import Item
-from typing import Optional
 
 import firebase_admin
 import os
@@ -19,7 +16,7 @@ if os.environ.get("GCP_PROJECT"):
 else:
     cred = credentials.Certificate('./service-account-credentials.json')
     firebase_admin.initialize_app(cred, {
-    'projectId': "bernachon-2021",
+        'projectId': "bernachon-2021",
     })
 
 db = firestore.client()
