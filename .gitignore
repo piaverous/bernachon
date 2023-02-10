@@ -81,3 +81,5 @@ src/config/assets.js
 # Personal data
 participants.csv
 participants.json
+
+.DS_Store
