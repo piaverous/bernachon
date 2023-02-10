@@ -48,8 +48,8 @@ const Dates: React.FC<Props> = ({ loadedData }) => {
           <Timeline
             groups={groups}
             items={items}
-            defaultTimeStart={moment(new Date("2021/05/29 00:00:00"))}
-            defaultTimeEnd={moment(new Date("2021/06/06 23:59:59"))}
+            defaultTimeStart={moment(new Date("2023/05/26 00:00:00"))}
+            defaultTimeEnd={moment(new Date("2023/05/29 23:59:59"))}
           />  
         </article>
       </div>

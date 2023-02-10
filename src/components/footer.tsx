@@ -8,7 +8,7 @@ export default () => (
         <br />
         À Saint-Point 📍
         <br />
-        Du <i>29.05.2021</i> au <i>06.06.2021</i>
+        Du <i>26.05.2023</i> au <i>29.05.2023</i>
       </p>
     </div>
   </footer>
