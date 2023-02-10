@@ -1,0 +1,1 @@
+FIRESTORE_COLLECTION_NAME="participants_2023"

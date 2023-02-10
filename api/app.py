@@ -1,11 +1,11 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from firebase_admin import credentials
-from firebase_admin import firestore
-
-import firebase_admin
 import os
 import requests
+import firebase_admin
+
+from firebase_admin import credentials, firestore
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from constants import FIRESTORE_COLLECTION_NAME
 
 OPEN_WEATHER_BASE = "http://api.openweathermap.org/data/2.5/onecall"
 origins = ["*"]
@@ -36,7 +36,7 @@ def root():
 
 @app.get('/read')
 def read_participants():
-    users_ref = db.collection('participants')
+    users_ref = db.collection(FIRESTORE_COLLECTION_NAME)
     docs = users_ref.stream()
     users_list = []
 

@@ -1,10 +1,9 @@
-from firebase_admin import credentials
-from firebase_admin import firestore
-
-import firebase_admin
 import os
-import csv
 import json
+import firebase_admin
+
+from firebase_admin import credentials, firestore
+from constants import FIRESTORE_COLLECTION_NAME
 
 # Use the application credentials
 if os.environ.get("GCP_PROJECT"):
@@ -17,20 +16,9 @@ else:
 
 db = firestore.client()
 
-
-
-# some JSON:
-x =  '{ "name":"John", "age":30, "city":"New York"}'
-
-# parse x:
-y = json.loads(x)
-
-# the result is a Python dictionary:
-print(y["age"])
-
 with open('participants.json', newline='') as jsonfile:
     participants = json.load(jsonfile)
     for participant in participants:
-        doc_ref = db.collection('participants').document(participant['name'])
+        doc_ref = db.collection(FIRESTORE_COLLECTION_NAME).document(participant['name'])
         doc_ref.set(participant)
         print(f"{participant['name']} - Arr {participant['arrivee']} - Dep {participant['depart']}")
