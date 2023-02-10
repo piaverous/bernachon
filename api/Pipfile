@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
+functions-framework = "*"
 
 [packages]
 fastapi = "*"
@@ -13,7 +14,7 @@ uvicorn = "*"
 requests = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.10"
 
 [scripts]
 dev = "uvicorn app:app --host=0.0.0.0 --port 3000 --reload"

@@ -16,7 +16,7 @@ else:
 
 db = firestore.client()
 
-with open('participants.json', newline='') as jsonfile:
+with open(f'private/{FIRESTORE_COLLECTION_NAME}.json', newline='') as jsonfile:
     participants = json.load(jsonfile)
     for participant in participants:
         doc_ref = db.collection(FIRESTORE_COLLECTION_NAME).document(participant['name'])

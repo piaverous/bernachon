@@ -14,10 +14,16 @@ origins = ["*"]
 if os.environ.get("GCP_PROJECT"):
     firebase_admin.initialize_app()
 else:
-    cred = credentials.Certificate('./service-account-credentials.json')
+    cred = None
+    try:
+        cred = credentials.Certificate('./service-account-credentials.json')
+    except Exception as err:
+        print(err)
+
     firebase_admin.initialize_app(cred, {
         'projectId': "bernachon-2021",
     })
+    
 
 db = firestore.client()
 app = FastAPI()

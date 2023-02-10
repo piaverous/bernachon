@@ -81,5 +81,12 @@ src/config/assets.js
 # Personal data
 participants.csv
 participants.json
+private/
 
+# Temporary files
 .DS_Store
+*.zip
+tmp/
+
+# Local terraform cache
+.terraform/
